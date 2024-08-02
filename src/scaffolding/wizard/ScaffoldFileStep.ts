@@ -74,6 +74,9 @@ export class ScaffoldFileStep<TWizardContext extends ScaffoldingWizardContext> e
             case 'Java':
                 subPath = path.join('java', `${this.fileType}.template`);
                 break;
+            case 'Flutter':
+                subPath = path.join('flutter', `${this.fileType}.template`);// adding flutter
+                break;
             case 'C++':
                 subPath = path.join('cpp', `${this.fileType}.template`);
                 break;

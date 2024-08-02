@@ -9,6 +9,7 @@ import { AllPlatforms, Platform } from '../../utils/platform';
 import { ChoosePortsStep } from './ChoosePortsStep';
 import { GatherInformationStep } from './GatherInformationStep';
 import { getJavaSubWizardOptions } from './java/JavaScaffoldingWizardContext';
+import { getFlutterSubWizardOptions } from './flutter/FlutterScaffoldingWizardContext';
 import { getNetCoreSubWizardOptions } from './netCore/NetCoreScaffoldingWizardContext';
 import { getNodeSubWizardOptions } from './node/NodeScaffoldingWizardContext';
 import { getPythonSubWizardOptions } from './python/PythonScaffoldingWizardContext';
@@ -58,6 +59,8 @@ export class ChoosePlatformStep extends TelemetryPromptStep<ScaffoldingWizardCon
                 return getPythonSubWizardOptions(wizardContext);
             case 'Java':
                 return getJavaSubWizardOptions(wizardContext);
+            case 'Flutter':
+                return getFlutterSubWizardOptions(wizardContext);
             case 'Go':
             case 'Ruby':
                 // Too simple to justify having their own methods
